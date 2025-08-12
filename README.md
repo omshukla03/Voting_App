@@ -1,6 +1,6 @@
 # 🗳️ Voting App
 
-A full-stack **Voting Application** inspired by interactive platforms like the YouTube community section.  
+A full-stack **Voting Application** inspired by interactive platforms community section.  
 Users can create polls, vote, and view results in real-time. Built with **Spring Boot** and **Angular** for a seamless experience.
 
 ---
