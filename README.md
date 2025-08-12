@@ -18,7 +18,7 @@ Users can create polls, vote, and view results in real-time. Built with **Spring
 
 ## 🛠 Tech Stack
 **Backend**
-- Java 17
+- Java 24
 - Spring Boot
 - Spring Data JPA
 - Hibernate
