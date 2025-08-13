@@ -1,114 +1,104 @@
-# 🗳️ Voting App
+# 🗳️ Community Voting App
 
-A full-stack **Voting Application** inspired by interactive platforms community section.  
-Users can create polls, vote, and view results in real-time. Built with **Spring Boot** and **Angular** for a seamless experience.
-
----
-
-## 📌 Features
-- **User Authentication** (Login/Signup)
-- **Create Polls** with multiple options
-- **Vote Once per Poll** per user
-- **Real-time Vote Count Updates**
-- **View Poll Results** in graphical format
-- **Responsive UI** for mobile and desktop
-- **Secure REST APIs** with validation
+A simple and responsive **Community Voting Application** built with **Angular**.  
+It allows users to create polls, vote on options, and view results instantly.  
+Includes a **Dark/Light mode toggle** for better user experience.
 
 ---
 
-## 🛠 Tech Stack
-**Backend**
-- Java 24
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- MySQL
-- REST APIs
+## 📸 Features
+- ✅ Create polls with multiple options.
+- ✅ Vote on polls with live vote count updates.
+- ✅ Dark/Light mode toggle with saved preference.
+- ✅ Fully responsive UI with Bootstrap styling.
+- ✅ Persistent theme using `localStorage`.
+- ✅ Clean and minimal design.
 
-**Frontend**
-- HTML5, CSS3, JavaScript
-- Angular Framework
+---
+
+## 🛠️ Technologies Used
+- **Angular** (Standalone Components)
+- **Bootstrap** (Styling & Layout)
+- **TypeScript**
+- **RxJS** (For API calls)
+- **HTML5 & CSS3**
 
 ---
 
 ## 📂 Project Structure
 ```
-voting-app/
+src/
+│── app/
+│   │── poll/               # Main poll component
+│   │   ├── poll.component.html
+│   │   ├── poll.component.css
+│   │   ├── poll.component.ts
+│   │── poll.service.ts     # API calls for polls
+│   │── poll.models.ts      # Data models
 │
-├── backend/           # Spring Boot Application
-│   ├── src/main/java  # Java source files
-│   ├── src/main/resources
-│   └── pom.xml
-│
-├── frontend/          # Angular Application
-│   ├── src
-│   └── package.json
-│
-└── README.md
+│── assets/                 # Static assets
+│── index.html              # Main HTML file
+│── styles.css              # Global styles
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## 🚀 Installation & Setup
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/voting-app.git
-cd voting-app
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 ```
 
-### 2️⃣ Backend Setup (Spring Boot)
-- Open `backend` folder in your IDE (IntelliJ/Eclipse).
-- Create a MySQL database:
-```sql
-CREATE DATABASE voting_app;
-```
-- Update `application.properties`:
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/voting_app
-spring.datasource.username=YOUR_DB_USERNAME
-spring.datasource.password=YOUR_DB_PASSWORD
-spring.jpa.hibernate.ddl-auto=update
-```
-- Run the Spring Boot app:
+### 2️⃣ Install Dependencies
 ```bash
-mvn spring-boot:run
-```
-
-### 3️⃣ Frontend Setup (Angular)
-```bash
-cd frontend
 npm install
+```
+
+### 3️⃣ Run the Development Server
+```bash
 ng serve
 ```
-- Access the app at: **http://localhost:4200**
+App will be available at: **http://localhost:4200**
 
 ---
 
-## 📡 API Endpoints
-| Method | Endpoint             | Description            |
-|--------|----------------------|------------------------|
-| POST   | `/api/auth/signup`   | Register new user      |
-| POST   | `/api/auth/login`    | User login             |
-| GET    | `/api/polls`         | Get all polls          |
-| POST   | `/api/polls`         | Create new poll        |
-| POST   | `/api/votes/{pollId}`| Vote for a poll option |
+## 🌐 Deployment on GitHub Pages
+To deploy the app to **GitHub Pages**:
+```bash
+npm install angular-cli-ghpages --save-dev
+ng build --output-path=dist/your-repo-name --base-href "https://your-username.github.io/your-repo-name/"
+npx angular-cli-ghpages --dir=dist/your-repo-name
+```
+Then, enable **GitHub Pages** in your repo settings → Pages → `gh-pages` branch.
 
 ---
 
-## 📸 Screenshots
-> *(Add your project screenshots here)*
+## 📷 Screenshots
+### Light Mode
+<img width="1905" height="953" alt="image" src="https://github.com/user-attachments/assets/a79bd5a4-abd4-4b4b-8b9b-0ffcba86cddb" />
+
+
+### Dark Mode
+<img width="1913" height="949" alt="image" src="https://github.com/user-attachments/assets/176a3651-e06e-46a4-a262-c47120485e0e" />
+<img width="1914" height="949" alt="image" src="https://github.com/user-attachments/assets/8f3d1a29-7292-49a7-bfcc-6e1a21ef4f53" />
+
 
 ---
 
 ## 📜 License
-This project is licensed under the **MIT License** - you are free to use, modify, and distribute.
+This project is licensed under the **MIT License**.
 
 ---
 
 ## 🤝 Contributing
-Pull requests are welcome! If you have suggestions or improvements, feel free to fork the repo and submit a PR.
+Contributions are welcome!  
+1. Fork the repo  
+2. Create a new branch (`feature/your-feature`)  
+3. Commit changes  
+4. Push to branch and create a Pull Request  
 
 ---
 
-**Developed with ❤️ using Spring Boot & Angular**
+**Developed with ❤️ using Angular**
