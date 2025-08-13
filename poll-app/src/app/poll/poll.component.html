@@ -1,0 +1,79 @@
+<div class="container-fluid mt-4 p-4" [ngClass]="{ 'dark-mode': isDarkMode }">
+  <!-- Dark Mode Toggle -->
+  <div class="text-end mb-3">
+    <button class="btn btn-sm btn-secondary" (click)="toggleDarkMode()">
+      {{ isDarkMode ? '🌙 Dark' : '☀️ Light' }}
+    </button>
+  </div>
+
+  <!-- Create Poll Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h4 class="card-title mb-3">Create a Community Poll</h4>
+
+      <input
+        [(ngModel)]="newPoll.question"
+        placeholder="What's your question?"
+        class="form-control mb-3"
+        required
+      />
+
+      <!-- Dynamic Options -->
+      <div
+        *ngFor="let option of newPoll.options; let i = index; trackBy: trackByIndex"
+        class="input-group mb-2"
+      >
+        <input
+          [(ngModel)]="option.optionText"
+          placeholder="Option {{ i + 1 }}"
+          class="form-control"
+          required
+        />
+        <!-- Remove option button -->
+        <button
+          *ngIf="newPoll.options.length > 2"
+          class="btn btn-outline-danger"
+          type="button"
+          (click)="removeOption(i)"
+        >
+          ✖
+        </button>
+      </div>
+
+      <!-- Add option button -->
+      <button
+        class="btn btn-outline-primary btn-sm mb-3"
+        type="button"
+        (click)="addOption()"
+      >
+        ➕ Add Option
+      </button>
+
+      <!-- Create poll button -->
+      <div class="text-end">
+        <button (click)="createPoll()" class="btn btn-success">Post Poll</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Poll List -->
+  <div
+    *ngFor="let poll of polls; trackBy: trackByIndex"
+    class="card mb-4 shadow-sm"
+  >
+    <div class="card-body">
+      <h5 class="card-title">{{ poll.question }}</h5>
+      <div
+        *ngFor="let option of poll.options; let j = index; trackBy: trackByIndex"
+        class="mb-2"
+      >
+        <button
+          class="btn btn-outline-primary w-100 text-start"
+          (click)="vote(poll.id, j)"
+        >
+          {{ option.optionText }} — {{ option.voteCount }} votes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

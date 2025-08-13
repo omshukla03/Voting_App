@@ -1,0 +1,60 @@
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #181818 !important;
+  color: #ffffff !important;
+  min-height: 100vh; /* Make it cover full height */
+}
+
+.dark-mode .card {
+  background-color: #242424 !important;
+  border-color: #333 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .card-title,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode label {
+  color: #ffffff !important;
+}
+
+/* Form Inputs */
+.dark-mode .form-control {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #aaaaaa !important;
+}
+
+/* Buttons */
+.dark-mode .btn-outline-primary {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: #333 !important;
+  border-color: #666 !important;
+}
+
+.dark-mode .btn-success {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: #ffffff !important;
+}
+
+/* Make background cover full width */
+.container-fluid.dark-mode {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
